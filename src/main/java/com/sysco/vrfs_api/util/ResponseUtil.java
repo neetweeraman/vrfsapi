@@ -1,5 +1,7 @@
 package com.sysco.vrfs_api.util;
 
+import com.jayway.restassured.response.Response;
+import com.syscolab.qe.core.api.restassured.RestUtil;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -11,6 +13,10 @@ import static com.syscolab.qe.core.api.restassured.RestUtil.getValue;
  * Refer  com.syscolabs.qe.core.api
  */
 public class ResponseUtil {
+
+    public static int getResponseCode(Response response){
+        return RestUtil.getResponseCode(response);
+    }
 
     public static boolean getResponseStatus(String response) {
         boolean isSuccess = false;

@@ -3,7 +3,15 @@ package com.sysco.vrfs_api.util;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.jayway.restassured.RestAssured;
+import com.jayway.restassured.response.Header;
+import com.jayway.restassured.response.Response;
+import com.jayway.restassured.specification.RequestSpecification;
+import com.sysco.vrfs_api.common.Constant;
+import com.sysco.vrfs_api.common.URIs;
 import com.syscolab.qe.core.api.request.RequestBase;
+import com.syscolab.qe.core.api.restassured.RestUtil;
+import com.syscolab.qe.core.api.util.Headers;
 
 /**
  * QE-CORE CONTAINS API RELATED FUNCTIONS
@@ -11,6 +19,24 @@ import com.syscolab.qe.core.api.request.RequestBase;
  */
 public class RequestUtil {
 
+    public static final String NEW_LOAD_PATH = "/new-load-controller/";
+
+    public static String createNewLoad(){
+        return RestUtil.send(Headers.getHeader(), "", Constant.BASE_URI, Constant.BASE_PATH, URIs.getCreateNewLoadURI(), "GET");
+    }
+
+    public static <T> Response createNewLoad_(){
+        RestAssured.baseURI = Constant.BASE_URI;
+        RestAssured.basePath = Constant.BASE_PATH;
+        String newLoadURI = NEW_LOAD_PATH + URIs.getCreateNewLoadURI();
+        return RestUtil.send(Headers.getHeader(), "", newLoadURI , "GET");
+    }
+
+    public static void executeCreateNewLoad(){
+        RequestSpecification reqSpec = RestUtil.getRequestSpec(Headers.getHeader(), "{\"loadNumber\":0}");
+        String uri = NEW_LOAD_PATH + URIs.getCreateNewLoadURI();
+        RestUtil.execute("GET",reqSpec, uri);
+    }
     RequestUtil() {
 
     }

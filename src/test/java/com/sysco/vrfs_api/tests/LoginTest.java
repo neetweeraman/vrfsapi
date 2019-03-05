@@ -1,13 +1,22 @@
 package com.sysco.vrfs_api.tests;
 
+import com.jayway.restassured.RestAssured;
 import com.jayway.restassured.response.Response;
+import com.jayway.restassured.specification.RequestSpecification;
+import com.sysco.vrfs_api.common.Constant;
 import com.sysco.vrfs_api.util.RequestUtil;
+import com.sysco.vrfs_api.util.ResponseUtil;
 import com.sysco.vrfs_api.util.TestBase;
 import com.syscolab.qe.core.api.restassured.RestUtil;
 import com.syscolab.qe.core.api.util.Headers;
+import org.apache.http.message.BasicHttpRequest;
+import org.json.HTTP;
 import org.testng.ITestContext;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
+
+import java.net.HttpURLConnection;
+import java.net.URL;
 
 
 public class LoginTest extends TestBase {
@@ -24,10 +33,19 @@ public class LoginTest extends TestBase {
 
         RestUtil.BASE_PATH = "";
         RestUtil.API_HOST = "";
-        Response response = RestUtil.send(Headers.getHeader(), "{  \"lastLoadNumber\": 0 }", "http://vrfsweb-qa.aws-us-east-1.na.sysco.tst:8081/swagger-ui.html#!/new-load-controller/createNewLoadUsingGET",  "GET");
-//        System.out.println("response code ==> "+response.statusCode());
-//        System.out.println("response body ==> "+response.body().toString());
-        System.out.println("Response code == "+response.statusCode());
+        System.out.println("send request\n");
+        String response = RequestUtil.createNewLoad();
+
+        System.out.println("execute\n");
+        RequestUtil.executeCreateNewLoad();
+
+        System.out.println("Response ==\n "+ response);
+
+        /*Response response = RequestUtil.createNewLoad_();
+        System.out.println("Response Code: "+ ResponseUtil.getResponseCode(response));*/
+
+        System.out.println("\nafter response");
+
     }
 
 }
