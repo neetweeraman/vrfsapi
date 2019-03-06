@@ -18,6 +18,8 @@ public class ResponseUtil {
         return RestUtil.getResponseCode(response);
     }
 
+    public static String getResponseBodyAsString(Response response){ return  response.asString(); }
+
     public static boolean getResponseStatus(String response) {
         boolean isSuccess = false;
         try {

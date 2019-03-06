@@ -7,11 +7,16 @@ import com.jayway.restassured.RestAssured;
 import com.jayway.restassured.response.Header;
 import com.jayway.restassured.response.Response;
 import com.jayway.restassured.specification.RequestSpecification;
+import com.sun.xml.bind.v2.runtime.reflect.opt.Const;
 import com.sysco.vrfs_api.common.Constant;
+import com.sysco.vrfs_api.common.Host;
 import com.sysco.vrfs_api.common.URIs;
 import com.syscolab.qe.core.api.request.RequestBase;
 import com.syscolab.qe.core.api.restassured.RestUtil;
 import com.syscolab.qe.core.api.util.Headers;
+
+import javax.swing.text.html.HTMLEditorKit;
+import java.util.HashMap;
 
 /**
  * QE-CORE CONTAINS API RELATED FUNCTIONS
@@ -19,24 +24,46 @@ import com.syscolab.qe.core.api.util.Headers;
  */
 public class RequestUtil {
 
-    public static final String NEW_LOAD_PATH = "/new-load-controller/";
+    public static final String NEW_LOAD_PATH = "newLoad/";
+    public static final String LOAD_MGMR_PATH = "loadManager/";
 
-    public static String createNewLoad(){
-        return RestUtil.send(Headers.getHeader(), "", Constant.BASE_URI, Constant.BASE_PATH, URIs.getCreateNewLoadURI(), "GET");
-    }
-
-    public static <T> Response createNewLoad_(){
-        RestAssured.baseURI = Constant.BASE_URI;
-        RestAssured.basePath = Constant.BASE_PATH;
-        String newLoadURI = NEW_LOAD_PATH + URIs.getCreateNewLoadURI();
-        return RestUtil.send(Headers.getHeader(), "", newLoadURI , "GET");
-    }
-
-    public static void executeCreateNewLoad(){
-        RequestSpecification reqSpec = RestUtil.getRequestSpec(Headers.getHeader(), "{\"loadNumber\":0}");
+    public static <T> Response createNewLoad(String country){
+        Host.selectCountry(country);
         String uri = NEW_LOAD_PATH + URIs.getCreateNewLoadURI();
-        RestUtil.execute("GET",reqSpec, uri);
+        return RestUtil.send(Headers.getHeader("vrfsadmin", "Sysco123"), "", uri, "GET");
     }
+
+    public static <T> Response displayCarrierDetails(String country, String loadNumber){
+        Host.selectCountry((country));
+        String uri = LOAD_MGMR_PATH + URIs.getDisplayCarrierDetailsURI(loadNumber);
+        return RestUtil.send(Headers.getHeader(), "", uri, "GET");
+    }
+
+    public static <T> Response displayEditCarrierDetails(String country, String loadNumber){
+        Host.selectCountry(country);
+        String uri = LOAD_MGMR_PATH + URIs.getDisplayEditCarrierDetailsURI(loadNumber);
+        return RestUtil.send(Headers.getHeader(), "", uri, "GET");
+    }
+
+    public static <T> Response displayLoadDetails(String country, String loadNumber){
+        Host.selectCountry(country);
+        String uri = LOAD_MGMR_PATH + URIs.getDisplayLoadDetailsURI(loadNumber);
+        return RestUtil.send(Headers.getHeader(), "", uri, "GET");
+    }
+
+    public static <T> Response displayEditLoadDetails(String country, String loadNumber){
+        Host.selectCountry(country);
+        String uri = LOAD_MGMR_PATH + URIs.getDisplayEditCarrierDetailsURI(loadNumber);
+        return RestUtil.send(Headers.getHeader(), "", uri, "GET");
+    }
+
+    public static <T> Response displayNotes(String country, String loadNumber){
+        Host.selectCountry(country);
+        String uri = LOAD_MGMR_PATH + URIs.getDisplayNotesURI(loadNumber);
+        return RestUtil.send(Headers.getHeader(), "", uri, "GET");
+    }
+
+
     RequestUtil() {
 
     }
