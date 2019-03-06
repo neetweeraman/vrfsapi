@@ -63,6 +63,12 @@ public class RequestUtil {
         return RestUtil.send(Headers.getHeader(), "", uri, "GET");
     }
 
+    public static <T> Response editCarrier(String country, T object){
+        Host.selectCountry(country);
+        String uri = LOAD_MGMR_PATH + URIs.getEditCarrierURI();
+        return RestUtil.send(Headers.getHeader(), JsonReaderUtil.objectToJson(object), uri, "POST");
+    }
+
 
     RequestUtil() {
 

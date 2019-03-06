@@ -1,6 +1,8 @@
 package com.sysco.vrfs_api.tests;
 
 import com.jayway.restassured.response.Response;
+import com.sysco.vrfs_api.request.data.EditCarrierData;
+import com.sysco.vrfs_api.util.JsonReaderUtil;
 import com.sysco.vrfs_api.util.RequestUtil;
 import com.sysco.vrfs_api.util.ResponseUtil;
 import com.sysco.vrfs_api.util.TestBase;
@@ -9,8 +11,10 @@ import org.testng.ITestContext;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
-public class VrfsApiTest extends TestBase {
+import java.io.FileNotFoundException;
 
+public class VrfsApiTest extends TestBase {
+    private static EditCarrierData[] editCarrierData;
 
     @BeforeClass
     public static void initiate(ITestContext iTestContext) {
@@ -48,9 +52,17 @@ public class VrfsApiTest extends TestBase {
         Assert.assertEquals(ResponseUtil.getResponseCode(response), 200, "Success code is 200");
     }
 
-    @Test(description = "ID-005", alwaysRun = true)
+    @Test(description = "ID-006", alwaysRun = true)
     public static void testDisplayNotesSuccessCode200(){
         Response response = RequestUtil.displayNotes("usa", "3914087");
+        Assert.assertEquals(ResponseUtil.getResponseCode(response), 200, "Success code is 200");
+    }
+
+    @Test(description = "ID-005", alwaysRun = true)
+    public static void testEditLoadSuccessCode200() throws FileNotFoundException {
+        editCarrierData = JsonReaderUtil.getEditLoadDataFromJasonArray();
+        editCarrierData[0].loadNumber = "97060824";
+        Response response = RequestUtil.editCarrier("usa", editCarrierData[0]);
         Assert.assertEquals(ResponseUtil.getResponseCode(response), 200, "Success code is 200");
     }
 
