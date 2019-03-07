@@ -31,6 +31,11 @@ public class URIs {
     public static String getEditCarrierURI(){
         return "editCarrier";
     }
+
+    public static String getEditDetailURI(){
+        return "editDetail";
+    }
+
     URIs() {
 
     }

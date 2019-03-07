@@ -3,20 +3,12 @@ package com.sysco.vrfs_api.util;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.jayway.restassured.RestAssured;
-import com.jayway.restassured.response.Header;
 import com.jayway.restassured.response.Response;
-import com.jayway.restassured.specification.RequestSpecification;
-import com.sun.xml.bind.v2.runtime.reflect.opt.Const;
-import com.sysco.vrfs_api.common.Constant;
 import com.sysco.vrfs_api.common.Host;
 import com.sysco.vrfs_api.common.URIs;
 import com.syscolab.qe.core.api.request.RequestBase;
 import com.syscolab.qe.core.api.restassured.RestUtil;
 import com.syscolab.qe.core.api.util.Headers;
-
-import javax.swing.text.html.HTMLEditorKit;
-import java.util.HashMap;
 
 /**
  * QE-CORE CONTAINS API RELATED FUNCTIONS
@@ -24,8 +16,8 @@ import java.util.HashMap;
  */
 public class RequestUtil {
 
-    public static final String NEW_LOAD_PATH = "newLoad/";
-    public static final String LOAD_MGMR_PATH = "loadManager/";
+    private static final String NEW_LOAD_PATH = "newLoad/";
+    private static final String LOAD_MGMR_PATH = "loadManager/";
 
     public static <T> Response createNewLoad(String country){
         Host.selectCountry(country);
@@ -69,6 +61,11 @@ public class RequestUtil {
         return RestUtil.send(Headers.getHeader(), JsonReaderUtil.objectToJson(object), uri, "POST");
     }
 
+    public static <T> Response editDetail(String country, T object){
+        Host.selectCountry(country);
+        String uri = LOAD_MGMR_PATH + URIs.getEditDetailURI();
+        return RestUtil.send(Headers.getHeader(), JsonReaderUtil.objectToJson(object), uri, "POST");
+    }
 
     RequestUtil() {
 

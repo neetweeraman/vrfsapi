@@ -8,6 +8,8 @@ public class Constant {
 
     public static final int USA_PORT = 8081;
     public static final int CANADA_PORT = 8082;
+    public static final String VRFS_USA_BASE_URI = "http://vrfsweb-qa.aws-us-east-1.na.sysco.tst:8081/swagger-ui.html#!";
+    public static final String VRFS_CANADA_BASE_URI = "http://vrfsweb-qa.aws-us-east-1.na.sysco.tst:8082/swagger-ui.html#!";
     public static final String VRFS_API_HOST = "http://vrfsweb-qa.aws-us-east-1.na.sysco.tst:";
     public static final String VRFS_BASE_PATH = "";
 
