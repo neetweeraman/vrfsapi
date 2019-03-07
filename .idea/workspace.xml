@@ -1,25 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7db32326-8302-490b-b77b-dac152dab329" name="Default Changelist" comment="post request">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/loadManager/editDetail.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/sysco/vrfs_api/tests/loadManager/displayCarrierDetails/DisplayCarrierDetailsTests.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/sysco/vrfs_api/tests/loadManager/displayEditCarrierDetails/DisplayEditCarrierDetails.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/sysco/vrfs_api/tests/loadManager/displayEditLoadDetails/DisplayEditLoadDetailsTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/sysco/vrfs_api/tests/loadManager/displayLoadDetails/DisplayLoadDetailsTests.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/sysco/vrfs_api/tests/loadManager/displayNotes/DisplayNotesTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/sysco/vrfs_api/tests/loadManager/editCarrier/EditCarrierTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/sysco/vrfs_api/tests/newLoad/createNewLoad/CreateNewLoadTest.java" afterDir="false" />
+    <list default="true" id="7db32326-8302-490b-b77b-dac152dab329" name="Default Changelist" comment="changed the structure in test">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sysco/vrfs_api/common/Constant.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sysco/vrfs_api/common/Constant.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sysco/vrfs_api/common/URIs.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sysco/vrfs_api/common/URIs.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sysco/vrfs_api/util/RequestUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sysco/vrfs_api/util/RequestUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/sysco/vrfs_api/tests/VrfsApiTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/VRFS_API_Test.json" beforeDir="false" afterPath="$PROJECT_DIR$/target/VRFS_API_Test.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/sysco/vrfs_api/common/Constant.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/sysco/vrfs_api/common/Constant.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/sysco/vrfs_api/common/URIs.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/sysco/vrfs_api/common/URIs.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/sysco/vrfs_api/util/RequestUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/sysco/vrfs_api/util/RequestUtil.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/sysco/vrfs_api/tests/VrfsApiTest.class" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -33,7 +16,7 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/com/sysco/vrfs_api/tests/loadManager/editCarrier/EditCarrierTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="226">
+            <state relative-caret-position="271">
               <caret line="29" column="5" lean-forward="true" selection-start-line="29" selection-start-column="5" selection-end-line="29" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -94,6 +77,11 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
     <option name="PUSH_TAGS">
       <GitPushTagMode />
     </option>
@@ -291,12 +279,12 @@
   </component>
   <component name="PropertiesComponent">
     <property name="ChangesTree.GroupingKeys" value="directory" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1551945740149" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1551946342536" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.49195403" />
-    <property name="settings.editor.selected.configurable" value="configurable.group.tools" />
+    <property name="settings.editor.selected.configurable" value="settings.github" />
   </component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
@@ -427,7 +415,14 @@
       <option name="project" value="LOCAL" />
       <updated>1551876647982</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="changed the structure in test">
+      <created>1551945767803</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1551945767803</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -466,7 +461,7 @@
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.23758389" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.23758389" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -475,14 +470,14 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4986577" visible="true" weight="0.46998537" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4986577" weight="0.46998537" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.45387995" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.50067115" side_tool="true" weight="0.329429" />
-      <window_info anchor="bottom" id="Version Control" order="9" sideWeight="0.49932885" weight="0.329429" />
+      <window_info active="true" anchor="bottom" id="Version Control" order="9" sideWeight="0.49932885" visible="true" weight="0.329429" />
       <window_info anchor="bottom" id="Messages" order="10" sideWeight="0.4986577" weight="0.329429" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -524,7 +519,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="post request" />
-    <option name="LAST_COMMIT_MESSAGE" value="post request" />
+    <MESSAGE value="changed the structure in test" />
+    <option name="LAST_COMMIT_MESSAGE" value="changed the structure in test" />
   </component>
   <component name="editorHistoryManager">
     <entry file="jar://$MAVEN_REPOSITORY$/org/testng/testng/6.9.10/testng-6.9.10.jar!/org/testng/internal/Invoker.class">
@@ -783,7 +779,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/com/sysco/vrfs_api/tests/loadManager/editCarrier/EditCarrierTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="226">
+        <state relative-caret-position="271">
           <caret line="29" column="5" lean-forward="true" selection-start-line="29" selection-start-column="5" selection-end-line="29" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
